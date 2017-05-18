@@ -2,11 +2,11 @@
 A node module for Neato Botvac Connected.
 Based on tomrosenbacks [PHP Port](https://github.com/tomrosenback/botvac) and [kanggurus work](https://github.com/kangguru/botvac) on the undocumented Neato API.
 
-##Installation
+## Installation
 ```npm install node-botvac```
 
 <a name="example"></a>
-##Usage Example
+## Usage Example
 ```Javascript
 var botvac = require('node-botvac');
 
@@ -34,7 +34,7 @@ client.authorize('email', 'password', false, function (error) {
 ```
 
 <a name="client"></a>
-##Client API
+## Client API
   * <a href="#authorize"><code>client.<b>authorize()</b></code></a>
   * <a href="#getRobots"><code>client.<b>getRobots()</b></code></a>
  
@@ -62,9 +62,10 @@ Returns an array containing your registered <a href="#robot">robots</a>.
 
 
 <a name="robot"></a>
-##Robot Properties
+## Robot Properties
 * ```robot.name``` - nickname of this robot (cannot be changed)
 * ```robot.eco``` boolean - set to true to clean in eco mode
+* ```robot.navigationMode``` number - 1: normal, 2: extra care (new models only)
 * ```robot.spotWidth``` number - width for spot cleaning in cm
 * ```robot.spotHeight``` number - height for spot cleaning in cm
 * ```robot.spotRepeat``` boolean - set to true to clean spot two times
@@ -82,7 +83,7 @@ These properties will be updated every time <a href="#getState"><code>robot.<b>g
 * ```robot.canGoToBase``` boolean - robot can be <a href="#api">sent to base</a>
 
 <a name="api"></a>
-##Robot API
+## Robot API
   * <a href="#getState"><code>robot.<b>getState()</b></code></a>
   * <a href="#getSchedule"><code>robot.<b>getSchedule()</b></code></a>
   * <a href="#enableSchedule"><code>robot.<b>enableSchedule()</b></code></a>
@@ -170,18 +171,19 @@ Disables scheduling.
 
 -------------------------------------------------------
 <a name="startCleaning"></a>
-### robot.startCleaning([eco], [callback])
+### robot.startCleaning([eco], [navigationMode], [callback])
 
 Start cleaning.
 
 * `eco` boolean - clean in eco mode
+* `navigationMode` number - 1: normal, 2: extra care (new models only)
 * `callback` - `function(error, result)`
   * `error` null if no error occurred
   * `result` string - 'ok' if cleaning could be started 
 
 -------------------------------------------------------
 <a name="startSpotCleaning"></a>
-### robot.startSpotCleaning([eco], [width], [height], [repeat], [callback])
+### robot.startSpotCleaning([eco], [width], [height], [repeat], [navigationMode], [callback])
 
 Start spot cleaning.
 
@@ -189,6 +191,7 @@ Start spot cleaning.
 * `width` number - spot width in cm (min 100cm)
 * `height` number - spot height in cm (min 100cm)
 * `repeat` boolean - clean spot two times
+* `navigationMode` number - 1: normal, 2: extra care (new models only)
 * `callback` - `function(error, result)`
   * `error` null if no error occurred
   * `result` string - 'ok' if spot cleaning could be started 
@@ -232,3 +235,7 @@ Send robot to base.
 * `callback` - `function(error, result)`
   * `error` null if no error occurred
   * `result` string - 'ok' if robot could be sent to base
+  
+## Changelog
+### 0.1.5
+* (naofireblade) add support for new parameter navigationMode (newer models)
