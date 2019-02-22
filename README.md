@@ -239,6 +239,8 @@ Send robot to base.
   * `result` string - 'ok' if robot could be sent to base
   
 ## Changelog
+### 0.2.0
+* (koush) http transport changes and updates
 ### 0.1.5
 * (naofireblade) add support for new parameter navigationMode (newer models)
 ### 0.1.6
