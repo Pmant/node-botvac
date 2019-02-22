@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/Pmant/node-botvac#readme",
   "dependencies": {
-    "request": "^2.73.0"
+    "axios": "^0.18.0"
   }
 }
