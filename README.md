@@ -151,6 +151,37 @@ Returns the scheduling state of the robot.
   * `schedule` boolean - true if scheduling is enabled
 
 -------------------------------------------------------
+<a name="getPersistentMaps"></a>
+### robot.getPersistentMaps([callback])
+
+Returns the scheduling state of the robot.
+
+* `callback` - `function(error, schedule)`
+  * `error` null if no error occurred
+  * `maps` Maps[] - array of maps
+
+-------------------------------------------------------
+<a name="getMapBoundaries"></a>
+### robot.getMapBoundaries(mapId, [callback])
+
+Returns the scheduling state of the robot.
+* `mapId` string - a Map id for which to get the boundaries
+* `callback` - `function(error, schedule)`
+  * `error` null if no error occurred
+  * `boundaries` Boundary[] - array of boundaries
+
+-------------------------------------------------------
+<a name="setMapBoundaries"></a>
+### robot.setMapBoundaries(mapId, [callback])
+
+Returns the scheduling state of the robot.
+* `mapId` string - a Map id for which to get the boundaries
+* `boundaries` Boundary[] - array of boundaries
+* `callback` - `function(error, schedule)`
+  * `error` null if no error occurred
+  * `boundaries` Boundary[] - array of boundaries
+
+-------------------------------------------------------
 <a name="enableSchedule"></a>
 ### robot.enableSchedule([callback])
 
@@ -179,6 +210,19 @@ Start cleaning.
 * `eco` boolean - clean in eco mode
 * `navigationMode` number - 1: normal, 2: extra care (new models only)
 * `eco` boolean - clean with enabled nogo lines
+* `callback` - `function(error, result)`
+  * `error` null if no error occurred
+  * `result` string - 'ok' if cleaning could be started 
+
+-------------------------------------------------------
+<a name="startCleaningBoundary"></a>
+### robot.startCleaningBoundary([eco], [extraCare], [boundaryId], [callback])
+
+Start cleaning.
+
+* `eco` boolean - clean in eco mode
+* `extraCare` boolean - clean in extra care (new models only)
+* `boundaryId` string - a boundary id (zone) to clean
 * `callback` - `function(error, result)`
   * `error` null if no error occurred
   * `result` string - 'ok' if cleaning could be started 
