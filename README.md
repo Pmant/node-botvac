@@ -283,6 +283,8 @@ Send robot to base.
   * `result` string - 'ok' if robot could be sent to base
   
 ## Changelog
+### 0.3.0
+* (az0uz) persistent maps and boundaries
 ### 0.2.0
 * (koush) http transport changes and updates
 ### 0.1.5
