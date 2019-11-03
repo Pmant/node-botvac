@@ -150,7 +150,7 @@ var state = {
 <a name="getSchedule"></a>
 ### robot.getSchedule([callback])
 
-RReturns the schedule object of the robot.
+Returns the schedule object of the robot.
 
 * `callback` - `function(error, schedule)`
   * `error` ```null``` if no error occurred
