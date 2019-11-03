@@ -87,6 +87,7 @@ These properties will be updated every time <a href="#getState"><code>robot.<b>g
 ## Robot API
   * <a href="#getState"><code>robot.<b>getState()</b></code></a>
   * <a href="#getSchedule"><code>robot.<b>getSchedule()</b></code></a>
+  * <a href="#getScheduleEnabled"><code>robot.<b>getScheduleEnabled()</b></code></a>
   * <a href="#enableSchedule"><code>robot.<b>enableSchedule()</b></code></a>
   * <a href="#disableSchedule"><code>robot.<b>disableSchedule()</b></code></a>
   * <a href="#startCleaning"><code>robot.<b>startCleaning()</b></code></a>  
@@ -148,6 +149,32 @@ var state = {
 -------------------------------------------------------
 <a name="getSchedule"></a>
 ### robot.getSchedule([callback])
+
+RReturns the schedule object of the robot.
+
+* `callback` - `function(error, schedule)`
+  * `error` ```null``` if no error occurred
+  * `schedule` ```object```
+    * example:
+ ```Javascript
+var schedule = {
+    enabled: true,
+    events: [{
+                mode: 2,
+                day: 1,
+                startTime: "09:00",
+                boundary: {
+                    id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                    name: "Küche"
+                },
+                mapId: "2019-11-02T15:17:00Z"
+        }]
+    };
+```
+
+-------------------------------------------------------
+<a name="getScheduleEnabled"></a>
+### robot.getScheduleEnabled([callback])
 
 Returns the scheduling state of the robot.
 
