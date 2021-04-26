@@ -298,6 +298,8 @@ Locate the robot by emitting a sound and light
   * `result` string - 'ok' if robot could be located
   
 ## Changelog
+### 0.4.1
+* (jbtibor) update dependencies
 ### 0.4.0
 * (naofireblade) add findMe
 ### 0.3.0
