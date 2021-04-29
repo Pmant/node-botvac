@@ -153,7 +153,44 @@ Returns the scheduling state of the robot.
 
 * `callback` - `function(error, schedule)`
   * `error` null if no error occurred
-  * `schedule` boolean - true if scheduling is enabled
+  * `schedule` ```object```
+    * example:
+ ```Javascript
+var schedule = {
+    type:1,
+    enabled:true,
+    events:[
+        {
+            day:1,
+            startTime:"08:30"
+        },
+        {
+            day:2,
+            startTime:"08:30"
+        },
+        {
+            day:3,
+            startTime:"08:30"
+        },
+        {
+            day:4,
+            startTime:"08:30"
+        },
+        {
+            day:5,
+            startTime:"08:30"
+        },
+        {
+            day:6,
+            startTime:"11:30"
+        },
+        {
+            day:0,
+            startTime:"11:30"
+        }
+    ]
+}
+```
 
 -------------------------------------------------------
 <a name="enableSchedule"></a>
