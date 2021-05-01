@@ -147,14 +147,16 @@ var state = {
 
 -------------------------------------------------------
 <a name="getSchedule"></a>
-### robot.getSchedule([callback])
+### robot.getSchedule([callback],[getfull])
 
 Returns the scheduling state of the robot.
 
 * `callback` - `function(error, schedule)`
-  * `error` null if no error occurred
-  * `schedule` ```object```
-    * example:
+  * `error` ```null``` if no error occurred
+  * `schedule` depend of getFull
+    * ```boolean``` (when `getFull` is `undefined` or `false`) true if scheduling is enabled 
+    * ```object``` (when `getFull` is `true`) full schedule description object
+        * example:
  ```Javascript
 var schedule = {
     type:1,
@@ -191,6 +193,7 @@ var schedule = {
     ]
 }
 ```
+* `getFull` - boolean, to return the full schedule object, not only it status
 
 -------------------------------------------------------
 <a name="enableSchedule"></a>
