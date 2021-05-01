@@ -147,7 +147,7 @@ var state = {
 
 -------------------------------------------------------
 <a name="getSchedule"></a>
-### robot.getSchedule([callback],[getfull])
+### robot.getSchedule([callback],[getFull])
 
 Returns the scheduling state of the robot.
 
