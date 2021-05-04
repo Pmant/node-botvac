@@ -1,6 +1,6 @@
 {
   "name": "node-botvac",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Neato Botvac API",
   "main": "index.js",
   "scripts": {

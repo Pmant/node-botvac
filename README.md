@@ -339,6 +339,10 @@ Locate the robot by emitting a sound and light
   * `result` string - 'ok' if robot could be located
   
 ## Changelog
+### 0.4.2
+* (PeterVoronov) add optional detailed parameter to robot.getSchedule
+* (naofireblade) add isBinFull property 
+* (naofireblade) prevent request from catching exceptions in callback
 ### 0.4.1
 * (jbtibor) update dependencies
 ### 0.4.0
