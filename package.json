@@ -1,6 +1,6 @@
 {
   "name": "node-botvac",
-  "version": "0.4.2",
+  "version": "0.4.2-schedule-write",
   "description": "Neato Botvac API",
   "main": "index.js",
   "scripts": {
