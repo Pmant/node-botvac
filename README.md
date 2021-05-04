@@ -148,10 +148,10 @@ var state = {
 
 -------------------------------------------------------
 <a name="getSchedule"></a>
-### robot.getSchedule([callback],[detailed])
+### robot.getSchedule([detailed], [callback])
 
 Returns the scheduling state of the robot.
-
+* `detailed` - `boolean` see below
 * `callback` - `function(error, schedule)`
   * `error` ```null``` if no error occurred
   * `schedule` depend on `detailed`
