@@ -66,6 +66,7 @@ Returns an array containing your registered <a href="#robot">robots</a>.
 * ```robot.name``` - nickname of this robot (cannot be changed)
 
 These properties will be updated every time <a href="#getState"><code>robot.<b>getState()</b></code></a> is called:
+* ```robot.isBinFull``` boolean
 * ```robot.isCharging``` boolean
 * ```robot.isDocked``` boolean
 * ```robot.isScheduleEnabled``` boolean
