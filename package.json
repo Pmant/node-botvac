@@ -1,6 +1,6 @@
 {
   "name": "node-botvac",
-  "version": "0.4.2-schedule-write",
+  "version": "0.4.3",
   "description": "Neato Botvac API",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/Pmant/node-botvac#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.4"
   }
 }
